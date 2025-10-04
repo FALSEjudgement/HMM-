@@ -31,10 +31,11 @@ pij = pij(h)
 """
 
 """
-h = 2                                                                           T
-s = 2                                                                           E
-pi = [0.8,0.2]     #p(x1=i)                                                     s
-                                                                                T
+
+h = 2                                                                           #T
+s = 2                                                                           #E
+pi = [0.8,0.2]     #p(x1=i)                                                     #s
+                                                                                #T
 pij=[
     [0.9,0.1],
     [0.0,1.0]
@@ -53,7 +54,7 @@ s_date = [0,1,0,0,1]
 
 def F(n,j):
     if n == 0:
-        return pi[j]*pis[j][0]
+        return pi[j]*pis[j][s_date[0]]
     else:
         f = 0 
         for i in range(0,h):
@@ -91,3 +92,6 @@ def FBp(k):
     for i in range(0,h):
         s += F(k,i)*B(k,i)
     return s
+
+
+
